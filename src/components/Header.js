@@ -27,18 +27,6 @@ const Header = () => {
             >
               Product
             </li>
-            <li
-              className="font-semibold hover:cursor-pointer hover:text-amber-900"
-              onClick={() => navigate("/cart")}
-            >
-              Order
-            </li>
-            <li
-              className="font-semibold hover:cursor-pointer hover:text-amber-900"
-              onClick={() => navigate("/history")}
-            >
-              Dashboard
-            </li>
           </ul>
         </div>
         {localStorage.getItem("@userLogin") ? <MenuAuth /> : <MenuUnAuth />}

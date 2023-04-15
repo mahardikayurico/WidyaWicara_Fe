@@ -9,7 +9,6 @@ const NewProduct = () => {
     title: "",
     category: "",
     price: "",
-    image: null,
   });
   const [validate, setValidate] = useState({
     error: false,
@@ -17,17 +16,12 @@ const NewProduct = () => {
   });
   const navigate = useNavigate();
 
-  const handleFileChange = (event) => {
-    setFormData({ ...formData, image: event.target.files[0] });
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = new FormData();
     form.append("title", formData.title);
     form.append("category", formData.category);
     form.append("price", formData.price);
-    form.append("image", formData.image);
     axios({
       url: "http://localhost:5000/api/v1/products",
       method: "POST",
@@ -46,30 +40,6 @@ const NewProduct = () => {
     <div className="bg-gray-100">
       <Header />
       <main className="container max-w-5xl mx-auto flex flex-row  ">
-        <section className=" basis-[40%] mt-3">
-          <div className="align-center">
-            <img
-              className="mask mask-circle max-w-[70%] mx-auto"
-              src="https://placeimg.com/200/280/arch"
-              alt="Shoes"
-            />
-          </div>
-          <div className="text-center">
-            <button className="btn btn-primary border border-black w-3/4 my-5   py-2 bg-[#0B132A] hover:bg-[#0e3097] text-white">
-              Take a picture
-            </button>
-            <form onSubmit={handleSubmit}>
-              <button
-                onChange={handleFileChange}
-                type="file"
-                className="btn btn-primary border border-black w-3/4 my-5   py-2 bg-[#FFBA33] hover:bg-amber-700 text-[#6A4029]"
-              >
-                Choose from gallery
-              </button>
-            </form>
-          </div>
-        </section>
-
         <section className="  ml-3 basis-[60%] mt-3">
           <form className="mt-10 " onSubmit={handleSubmit}>
             <div className="flex flex-col py-2 w-3/4 mx-auto ">

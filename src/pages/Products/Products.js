@@ -11,46 +11,6 @@ const Products = () => {
     <div className="bg-gray-100">
       <Header />
       <main className="container max-w-5xl mx-auto flex flex-row  ">
-        {/* hero section start */}
-        <section className=" basis-[30%] mt-3">
-          <div>
-            <div className="">
-              <h1 className="text-center"> Promo For You </h1>
-              <h5 className="text-center">
-                Coupons will be updated every weeks. <br /> Check them out!
-              </h5>
-            </div>
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 gap-7 p-3">
-            <div className="card card-side bg-base-100 shadow-xl">
-              <figure>
-                <img src="https://placeimg.com/200/280/arch" alt="Movie" />
-              </figure>
-              <div className="card-body p-0">
-                <h2 className="card-title">HAPPY MOTHER’S DAY!</h2>
-                <p>Get one of our favorite menu for free!</p>
-              </div>
-            </div>
-            <div className="card card-side bg-base-100 shadow-xl">
-              <figure>
-                <img src="https://placeimg.com/200/280/arch" alt="Movie" />
-              </figure>
-              <div className="card-body p-0">
-                <h2 className="card-title">HAPPY MOTHER’S DAY!</h2>
-                <p>Get one of our favorite menu for free!</p>
-              </div>
-            </div>
-          </div>
-          <div className="text-center">
-            <button className="btn btn-primary border border-black w-3/4 my-5   py-2 bg-amber-400 hover:bg-amber-200 text-[#6A4029]">
-              Edit Promo
-            </button>
-            <button className="btn btn-primary border border-black w-3/4 my-5   py-2 bg-[#6A4029] hover:bg-amber-700 text-white">
-              Add New Promo
-            </button>
-          </div>
-        </section>
         <section className=" border-l-4 ml-3 basis-[70%] mt-3">
           <div className="flex-1 ">
             <ul className="flex flex-row space-x-6 justify-center">
@@ -103,7 +63,6 @@ const Products = () => {
         </section>
         {/* hero section end */}
       </main>
-      <Footer />
     </div>
   );
 };
